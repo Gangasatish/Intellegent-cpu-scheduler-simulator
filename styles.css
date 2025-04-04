@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Neon Header */
+.image-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+@keyframes neonGlow {
+    0% { filter: drop-shadow(0 0 5px #00c3ff); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 15px #00c3ff); transform: scale(1.1); }
+    100% { filter: drop-shadow(0 0 5px #00c3ff); transform: scale(1); }
+}
+
+.neon-image {
+    width: 80px;
+    animation: neonGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 10px #00c3ff;
+}
+
+/* Buttons */
+button {
+    background-color: #00c3ff;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #008ac7;
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+th, td {
+    border: 1px solid #00c3ff;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #00c3ff;
+    color: black;
+}
+
+/* Loading Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 195, 255, 0.3);
+    border-top: 5px solid #00c3ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+/*
