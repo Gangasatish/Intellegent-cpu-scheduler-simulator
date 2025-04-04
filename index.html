@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduler Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Neon Header with Image -->
+    <div class="image-container">
+        <img src="image/icons8-task-48.png" alt="CPU" class="neon-image">
+        <h1>CPU Scheduler Simulator</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <label for="algorithm">Choose Algorithm:</label>
+        <select id="algorithm">
+            <option value="FCFS">FCFS</option>
+            <option value="SJF">SJF</option>
+            <option value="RoundRobin">Round Robin</option>
+        </select>
+
+        <div id="quantumInput" style="display: none;">
+            <label for="quantum">Time Quantum:</label>
+            <input type="number" id="quantum" min="1">
+        </div>
+
+        <table id="processTable">
+            <tr>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+            </tr>
+        </table>
+        <button onclick="addProcess()">Add Process</button>
+        <button onclick="runSimulation()">Run Simulation</button>
+
+        <!-- Results Section -->
+        <h2>Results</h2>
+        <div id="loading" class="loader" style="display: none;"></div>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
